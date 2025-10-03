@@ -8,18 +8,21 @@ public class Student {
 		return studentId;
 	}
 	public void setStudentId(int studentId) {
+		System.out.println("Set Student Id");
 		this.studentId = studentId;
 	}
 	public String getStudentName() {
 		return studentName;
 	}
 	public void setStudentName(String studentName) {
+		System.out.println("Set Student Name");
 		this.studentName = studentName;
 	}
 	public String getStudentAddress() {
 		return studentAddress;
 	}
 	public void setStudentAddress(String studentAddress) {
+		System.out.println("Set Student Address");
 		this.studentAddress = studentAddress;
 	}
 	public Student(int studentId, String studentName, String studentAddress) {

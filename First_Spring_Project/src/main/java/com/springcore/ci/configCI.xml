@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.springcore.ci.Certi" name="certificate" c:certificateName="Python Certificate" />
+	<bean class="com.springcore.ci.Certi" name="certificate2" c:certificateName="Java Certificate" />
+	<bean class="com.springcore.ci.Person" name="person1">
+		<constructor-arg value="1001" />
+		<constructor-arg value="Abhinav" />
+		<constructor-arg value="Ranchi" />
+		<constructor-arg ref="certificate" />
+	</bean>
+
+	<bean class="com.springcore.ci.Person" name="person2">
+		<constructor-arg value="1002" type="int" />
+		<constructor-arg value="Nitin" />
+		<constructor-arg value="kanke" />
+		<constructor-arg ref="certificate2"/>
+	</bean>
+	<!-- <bean class="com.springcore.ci.Person" name="person3"
+		c:personId="1003" c:personName="Neal" c:personAddress="Karamtoli"/> -->
+</beans>

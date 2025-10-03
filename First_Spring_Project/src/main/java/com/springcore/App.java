@@ -11,6 +11,11 @@ public class App
         @SuppressWarnings("resource")
 		ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
         Student st1 = (Student) context.getBean("student1");
+        Student st2 = (Student) context.getBean("student2");
+        Student st3 = (Student) context.getBean("student3");
+        
         System.out.println(st1);
+        System.out.println(st2);
+        System.out.println(st3);
     }
 }
