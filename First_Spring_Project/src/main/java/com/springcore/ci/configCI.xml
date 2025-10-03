@@ -10,7 +10,9 @@
                            http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<bean class="com.springcore.ci.Certi" name="certificate" c:certificateName="Python Certificate" />
+	
 	<bean class="com.springcore.ci.Certi" name="certificate2" c:certificateName="Java Certificate" />
+	
 	<bean class="com.springcore.ci.Person" name="person1">
 		<constructor-arg value="1001" />
 		<constructor-arg value="Abhinav" />
@@ -24,6 +26,16 @@
 		<constructor-arg value="kanke" />
 		<constructor-arg ref="certificate2"/>
 	</bean>
-	<!-- <bean class="com.springcore.ci.Person" name="person3"
-		c:personId="1003" c:personName="Neal" c:personAddress="Karamtoli"/> -->
+	
+	<bean class="com.springcore.ci.Person" name="person4">
+	<constructor-arg name="personId"><value>1003</value></constructor-arg>
+	<constructor-arg name="personName"><value>Neal</value></constructor-arg>
+	<constructor-arg name="personAddress"><value>Karamtoli</value></constructor-arg>
+	<constructor-arg name="certi"><ref bean="certificate2"></ref></constructor-arg>
+	</bean>
+		
+		<bean class="com.springcore.ci.Addition" name="add">
+		<constructor-arg value="10" index="1"/>
+		<constructor-arg value="20" index="0"/>
+		</bean>
 </beans>
