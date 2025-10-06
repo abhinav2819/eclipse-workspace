@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- This will generate ambiguity problem for the bean to use which type of the constructor -->
+	<!-- This will run by default String-String Type constructor -->
+	<bean class="com.springcore.ci.ambiguity.Emp" name="add">
+	<constructor-arg value="10"/>
+	<constructor-arg value="20"/>
+	</bean>
+	
+	<!-- This will run only the int-int constructor type no matter what is the order -->
+	<bean class="com.springcore.ci.ambiguity.Emp" name="add1">
+	<constructor-arg value="100" type="int"/>
+	<constructor-arg value="200" type="int"/>
+	</bean>
+	
+	<!-- We can change the index of the value also -->
+	<bean class="com.springcore.ci.ambiguity.Emp" name="add2">
+	<constructor-arg value="1000" type="int" index="1"/>
+	<constructor-arg value="2000" type="int" index="0"/>
+	</bean>
+</beans>

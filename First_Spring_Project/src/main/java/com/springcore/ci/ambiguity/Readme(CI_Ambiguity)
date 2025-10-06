@@ -1,0 +1,26 @@
+Ambigutiy Problem in Constructor Injection
+	As we can see in Emp.java class that we have instansiated two attributes of integer type, one is x and one is y
+	and also we created the three different types of constructors having different parameter inside
+	the parameter feid for first we use int-int type which was default as per our instansiated 
+	attributes, in second we use double-double and in last String-String asa well as i created a 
+	method which adds the both two integer as doSum .
+	When we created a bean and injected trhough construction injection after that i created a main
+	class which ask the getbean method from the created application context method and also we call the 
+	doSum method which adds both the attributes.
+	When we run the java application we got to know that the String-String parameter constructor type was 
+	called by the bean,
+	when we commented the String-String parameter constructor and again run the application we got to know
+	that the first constructor was called by the bean mean by using the order from the starting of the calss
+	i also checked by reversing orders of the constructors also (Other than String-String) and the result
+	was same the first constructor was calling,
+												so this is the ambiguity problem there in the constructor
+	injection.
+	
+Solution :
+			i) Use index attribute -> index="0"
+			ii) Use type attributr -> type="int"
+			iii) Use name attribute -> name="x"
+			
+			
+			Note: For code part of this follow the pacakge: com.springcore.ci.ambiguity (Emp.java) (TestMainCiAmbiguity)
+												   configuration XML file : src/main/resources (ConfigCIAMbigutiy.xml)
