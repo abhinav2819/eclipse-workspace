@@ -30,7 +30,7 @@
                            <property name="studentName" value="Nitin"/>
                            </bean>
                            
-                           <!--     Way 3 of declaring bean : value as p:NameSpace  -->
+                           <!--     Way 3 of declaring bean : value as p:NameSpace(Schema)  -->
                            
                            <bean class="com.springcore.si.Student" name="student3" p:studentId="1003" p:studentName="Neal" />
 </beans>

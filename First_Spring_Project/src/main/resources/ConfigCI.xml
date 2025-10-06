@@ -37,7 +37,7 @@
 	</bean>
 
 	<!-- Ways of Constructor Injection -->
-	<!-- Way 1 of declaring bean : value as an c:NameSpace -->
+	<!-- Way 1 of declaring bean : value as an c:NameSpace(Schema) -->
 
 	<!-- There is an ambiguity problem with the c:namespace constructor injection -->
 </beans>
