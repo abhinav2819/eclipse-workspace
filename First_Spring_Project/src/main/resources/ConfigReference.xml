@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.springcore.reference.Certi" name="Certificate1" p:courceName="Python Cource"/>
+	
+	<bean class="com.springcore.reference.Certi" name="Certificate2" p:courceName="Java Cource"/>
+	
+	<bean class="com.springcore.reference.Employee" name="employee1">
+	<property name="empId" value="1001"/>
+	<property name="empName" value="Abhinav"/>
+	<property name="empCerti" ref="Certificate1"/>
+	</bean>
+	
+	<bean class="com.springcore.reference.Employee" name="employee2" 
+	p:empId="1002" p:empName="Nitin" p:empCerti-ref="Certificate2"/>
+	
+	<bean class="com.springcore.reference.Employee" name="employee3">
+	<constructor-arg value="1003"/>
+	<constructor-arg value="Neal"/>
+	<constructor-arg ref="Certificate2"/>
+	</bean>
+	
+	<bean class="com.springcore.reference.Employee" name="employee4">
+	<constructor-arg name="empId">
+	<value>1001</value>
+	</constructor-arg>
+	
+	<constructor-arg name="empName">
+	<value>Ram</value>
+	</constructor-arg>
+	
+	<constructor-arg name="empCerti">
+	<ref bean="Certificate1"/>
+	</constructor-arg>
+	</bean>
+</beans>
