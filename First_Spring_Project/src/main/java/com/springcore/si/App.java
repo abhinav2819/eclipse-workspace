@@ -1,4 +1,4 @@
-package com.springcore;
+package com.springcore.si;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -9,7 +9,7 @@ public class App
     {
         System.out.println( "Hello World!" );
         @SuppressWarnings("resource")
-		ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("com/springcore/si/config.xml");
         Student st1 = (Student) context.getBean("student1");
         Student st2 = (Student) context.getBean("student2");
         Student st3 = (Student) context.getBean("student3");

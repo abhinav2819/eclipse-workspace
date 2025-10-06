@@ -11,7 +11,7 @@
                            <!-- Primitive Types  : -->
                            <!-- This is our First bean -->
                            <!-- Inserting values as an element method -1 -->
-                           <bean class="com.springcore.Student" name="student1">
+                           <bean class="com.springcore.si.Student" name="student1">
                            
                            <property name="studentId">
                            <value>1001</value>
@@ -29,7 +29,7 @@
                            
                            <!-- This is Second bean -->
                            <!-- Inserting Values as attributes method -2 -->
-                           <bean class="com.springcore.Student" name="student2">
+                           <bean class="com.springcore.si.Student" name="student2">
                            
                            <property name="studentId" value="1002" />
                            
@@ -42,5 +42,5 @@
                            <!-- This is Third bean -->
                            <!-- Inserting values using P-Schema -3 -->
                            
-                           <bean class="com.springcore.Student" name="student3" p:studentId="1001" p:studentName="Abhinav" p:studentAddress="New Ranchi" />
+                           <bean class="com.springcore.si.Student" name="student3" p:studentId="1001" p:studentName="Abhinav" p:studentAddress="New Ranchi" />
 </beans>
