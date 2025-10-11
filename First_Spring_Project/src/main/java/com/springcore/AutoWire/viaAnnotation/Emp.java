@@ -1,0 +1,33 @@
+package com.springcore.AutoWire.viaAnnotation;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class Emp {
+	@Autowired
+	private Address address;
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+		System.out.println("Setting address");
+	}
+
+	public Emp() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Emp(Address address) {
+		super();
+		this.address = address;
+		System.out.println("Inside constructor method");
+	}
+
+	@Override
+	public String toString() {
+		return "Emp [address=" + address + "]";
+	}
+}

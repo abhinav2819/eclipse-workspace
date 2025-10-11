@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.springcore.AutoWire.viaXML.Author" name="author">
+	<property name="men" value="Raja" />
+	<property name="women" value="Rani" />
+	</bean>
+	
+	<!-- <bean class="com.springcore.AutoWire.viaXML.Author" name="author12">
+	<property name="men" value="Raja" />
+	<property name="women" value="Rani" />
+	</bean> -->
+
+	<!-- Hear we used AutoWiring via using XML file which . 
+		Requirement:- 
+		 1) Name of the instance variable of the object should be same as the bean name 
+			stated(Otherwise it print null) - (But not applicable for the 'byType' and 'constructor'
+			we can give any different name also)
+		 2) Name of the bean should not be same for more than one bean
+		    - (SAME FOR THE 'byType' & 'constructor' AutoWiring)
+		 3) If we are using 'byType' AutoWiring and created more than one bean and stated their name
+		    different then it will confuse between these and throws exception - (And if we are
+		    using 'constructor' AutoWiring then again it will be confused but this time it will print null
+		    and it is obvious that if we use 'byName' then again it prints null only )
+		 4) We cannot create more than one bean for the same class it will prints null
+		 5) If we are using 'byName' AutoWiring and we have created more than one bean and for one 
+		    bean we stated the same name as the instance variable and for other bean(Bean for the same class) 
+		    we stated some different name so it will set the bean for both and it will print values for its 
+		    bean which have the same name -->
+		 
+	
+	<bean class="com.springcore.AutoWire.viaXML.Book1" name="book1" autowire="byName" />
+				
+	<!-- <bean class="com.springcore.AutoWire.viaXML.Book1" name="book1" autowire="byType" />
+	<bean class="com.springcore.AutoWire.viaXML.Book1" name="book1" autowire="constructor" /> -->
+</beans>

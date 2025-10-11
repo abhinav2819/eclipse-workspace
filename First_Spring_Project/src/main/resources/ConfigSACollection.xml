@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context 
+						http://www.springframework.org/schema/context/spring-context.xsd
+						http://www.springframework.org/schema/util 
+						http://www.springframework.org/schema/util/spring-util.xsd">
+	
+	<!-- Standalone List -->
+	
+	<util:list list-class="java.util.LinkedList" id="bestfriends">
+	<value>Neal</value>
+	<value>Nitin</value>
+	<value>Abhinav</value>
+	</util:list>
+	
+	<!-- Standalone Map -->
+	<util:map map-class="java.util.HashMap" id="fees">
+	<entry key="Java" value="8000"/>
+	<entry key="Python" value="4000"/>
+	<entry key="HTML-CSS" value="2000"/>
+	</util:map>
+	
+	<!-- Standalone Properties -->
+	<util:properties id="dbconfig">
+	<prop key="driver">com.mysql.jdbc.Driver</prop>
+	<prop key="username">root</prop>
+	<prop key="password">abc</prop>
+	<prop key="url">mysql:jdbc://localhost:3306/database</prop>
+	</util:properties>
+	
+	<!-- Standalone Set -->
+	<util:set set-class="java.util.TreeSet" id="ageset">
+	<value>200</value>
+	<value>60</value>
+	<value>150</value>
+	<value>20</value>
+	</util:set>
+	
+	<bean class="com.springcore.standalone.collections.Person11"
+		name="person1">
+		<property name="friends" ref="bestfriends"/>
+		<property name="feeStructure" ref="fees"/>
+		<property name="proper" ref="dbconfig"/>
+		<property name="age" ref="ageset"/>
+	</bean>
+
+</beans>
