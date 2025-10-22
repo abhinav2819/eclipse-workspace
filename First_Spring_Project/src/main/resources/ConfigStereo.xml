@@ -7,10 +7,17 @@
 	xmlns:util="http://www.springframework.org/schema/util"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 						http://www.springframework.org/schema/beans/spring-beans.xsd
-                    	http://www.springframework.org/schema/context 
-                    	http://www.springframework.org/schema/context/spring-context.xsd
-                        http://www.springframework.org/schema/util
-                        http://www.springframework.org/schema/util/spring-util.xsd">
-
+						http://www.springframework.org/schema/context 
+						http://www.springframework.org/schema/context/spring-context.xsd
+						http://www.springframework.org/schema/util 
+						http://www.springframework.org/schema/util/spring-util.xsd">
+	
+	<!-- Standalone List -->
+	<util:list list-class="java.util.ArrayList" id="add">
+	<value>Ranchi</value>
+	<value>Dangra</value>
+	<value>Chatra</value>
+	</util:list>
 	<context:component-scan base-package="com.springcore.stereotype"/>
+
 </beans>
