@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Demo {
+	//Primitive type Expression
 	@Value("#{25+75}")
 	private double x;
 	@Value("#{500/2-58+6}")
@@ -20,8 +21,14 @@ public class Demo {
 	@Value("#{T(java.lang.Math).E}")
 	private double e;
 	
+	//Hear we created our new object
 	@Value("#{new java.lang.String('Abhinav Raj')}")
 	private String name;
+	
+	//Boolean type Expression
+	
+	@Value("#{8-5>2}")
+	private boolean isActive;
 	
 	public double getX() {
 		return x;
@@ -57,7 +64,9 @@ public class Demo {
 	}
 	@Override
 	public String toString() {
-		return "Demo [x=" + x + ", y=" + y + ", z=" + z + ", e=" + e + ", name=" + name + "]";
+		return "Demo [x=" + x + ", y=" + y + ", z=" + z + ", e=" + e + ", name=" + name + ", isActive=" + isActive
+				+ "]";
 	}
+	
 	
 }
