@@ -20,6 +20,9 @@ public class Demo {
 	@Value("#{T(java.lang.Math).E}")
 	private double e;
 	
+	@Value("#{new java.lang.String('Abhinav Raj')}")
+	private String name;
+	
 	public double getX() {
 		return x;
 	}
@@ -45,9 +48,16 @@ public class Demo {
 	public void setE(double e) {
 		this.e = e;
 	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	@Override
 	public String toString() {
-		return "Demo [x=" + x + ", y=" + y + ", z=" + z + ", e=" + e + "]";
+		return "Demo [x=" + x + ", y=" + y + ", z=" + z + ", e=" + e + ", name=" + name + "]";
 	}
 	
 }
